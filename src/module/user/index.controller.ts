@@ -1,4 +1,3 @@
-import { AuthService } from '../auth/index.service';
 import { Body, Controller, Post, Get, Delete } from '@nestjs/common';
 import { UserService } from './index.service';
 import { USER } from 'src/constant/api';

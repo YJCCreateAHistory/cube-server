@@ -43,11 +43,9 @@ export class UserService {
   async regeister(regsiterInfo: IRegsiter): Promise<IResponse> {
 
     const { telephone, password, username } = regsiterInfo
-    const isExist = await this.isExistUserByPhone(telephone)
+    const retrievalUser = await this.isExistUserByPhone(telephone)
 
-    if (isExist.length) {
-      return null;
-    }
+    if (retrievalUser.length)  return null;
 
     const createUid = uuidv4()
     const time = createTime()
